@@ -113,7 +113,7 @@ export default function App() {
       <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
         <video
           ref={videoRef}
-          src="/assets/Man_typing_on_laptop_202607020937.mp4"
+          src={`${import.meta.env.BASE_URL}assets/Man_typing_on_laptop_202607020937.mp4`}
           muted
           autoPlay
           playsInline
