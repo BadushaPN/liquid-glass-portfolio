@@ -25,7 +25,7 @@ export default function App() {
     const step = (now: number) => {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      
+
       // Interpolate opacity starting from its current value
       const currentOpacity = startOpacity + opacityDiff * progress;
       video.style.opacity = currentOpacity.toFixed(3);
@@ -120,7 +120,7 @@ export default function App() {
           onTimeUpdate={handleTimeUpdate}
           onEnded={handleEnded}
           onPlay={handlePlay}
-          className="absolute top-0 left-0 w-full h-full object-cover translate-y-[17%]"
+          className="absolute top-0 left-0 w-full h-full object-cover scale-[1.5]"
           style={{ opacity: 0 }}
         />
       </div>
@@ -130,35 +130,32 @@ export default function App() {
         <div className="liquid-glass rounded-full px-6 py-3 flex items-center justify-between max-w-5xl mx-auto">
           {/* Left side: Logo & Links */}
           <div className="flex items-center gap-8">
-            <button 
-              onClick={() => setActiveTab('projects')} 
+            <button
+              onClick={() => setActiveTab('projects')}
               className="flex items-center gap-2 text-white font-semibold text-lg select-none hover:opacity-90 transition-opacity"
             >
               <Globe className="h-6 w-6 text-white" />
               <span>Badusha P N</span>
             </button>
             <div className="hidden md:flex items-center gap-8">
-              <button 
-                onClick={() => setActiveTab('projects')} 
-                className={`transition-colors text-sm font-medium ${
-                  activeTab === 'projects' ? 'text-white font-bold' : 'text-white/80 hover:text-white'
-                }`}
+              <button
+                onClick={() => setActiveTab('projects')}
+                className={`transition-colors text-sm font-medium ${activeTab === 'projects' ? 'text-white font-bold' : 'text-white/80 hover:text-white'
+                  }`}
               >
                 Projects
               </button>
-              <button 
-                onClick={() => setActiveTab('skills')} 
-                className={`transition-colors text-sm font-medium ${
-                  activeTab === 'skills' ? 'text-white font-bold' : 'text-white/80 hover:text-white'
-                }`}
+              <button
+                onClick={() => setActiveTab('skills')}
+                className={`transition-colors text-sm font-medium ${activeTab === 'skills' ? 'text-white font-bold' : 'text-white/80 hover:text-white'
+                  }`}
               >
                 Skills
               </button>
-              <button 
-                onClick={() => setActiveTab('contact')} 
-                className={`transition-colors text-sm font-medium ${
-                  activeTab === 'contact' ? 'text-white font-bold' : 'text-white/80 hover:text-white'
-                }`}
+              <button
+                onClick={() => setActiveTab('contact')}
+                className={`transition-colors text-sm font-medium ${activeTab === 'contact' ? 'text-white font-bold' : 'text-white/80 hover:text-white'
+                  }`}
               >
                 Contact
               </button>
@@ -167,13 +164,13 @@ export default function App() {
 
           {/* Right side: Actions */}
           <div className="flex items-center gap-4">
-            <button 
+            <button
               onClick={() => setActiveTab('contact')}
               className="text-white hover:text-white/85 transition-colors text-sm font-medium"
             >
               Hire Me
             </button>
-            <button 
+            <button
               onClick={handleDownloadCV}
               className="liquid-glass rounded-full px-6 py-2 text-white text-sm font-medium hover:bg-white/5 transition-colors"
             >
@@ -186,7 +183,7 @@ export default function App() {
       {/* Hero Content Area */}
       <main className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 py-8 text-center mt-4">
         {/* Heading */}
-        <h1 
+        <h1
           style={{ fontFamily: "'Instrument Serif', serif" }}
           className="text-5xl md:text-6xl lg:text-7xl text-white mb-3 tracking-tight whitespace-nowrap italic"
         >
@@ -204,11 +201,10 @@ export default function App() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-6 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 ${
-                activeTab === tab
+              className={`px-6 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 ${activeTab === tab
                   ? 'bg-white text-black font-bold shadow-lg shadow-white/10'
                   : 'liquid-glass text-white/70 hover:text-white hover:bg-white/5'
-              }`}
+                }`}
             >
               {tab}
             </button>
@@ -327,21 +323,21 @@ export default function App() {
           {activeTab === 'contact' && (
             <div className="max-w-xl w-full mx-auto space-y-4 text-center animate-fadeIn">
               {/* Email input bar */}
-              <form 
+              <form
                 onSubmit={(e) => {
                   e.preventDefault();
                   alert("Email inquiry received! I'll get in touch with you shortly.");
-                }} 
+                }}
                 className="liquid-glass rounded-full pl-6 pr-2 py-2 flex items-center gap-3"
               >
-                <input 
-                  type="email" 
-                  placeholder="Enter your email to collaborate" 
+                <input
+                  type="email"
+                  placeholder="Enter your email to collaborate"
                   className="bg-transparent text-white placeholder:text-white/40 text-base outline-none flex-1 w-full"
                   required
                 />
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="bg-white rounded-full p-3 text-black hover:bg-white/90 transition-colors flex items-center justify-center shrink-0"
                   aria-label="Submit email"
                 >
@@ -356,7 +352,7 @@ export default function App() {
 
               {/* Manifesto button */}
               <div className="flex justify-center pt-2">
-                <button 
+                <button
                   onClick={() => alert("Engineering Manifesto:\n\n1. Solve user pain points first.\n2. Write maintainable, self-documenting code.\n3. Keep rendering performance close to 60fps / 120fps.\n4. Design interactions that feel premium.")}
                   className="liquid-glass rounded-full px-8 py-3 text-white text-sm font-medium hover:bg-white/5 transition-colors"
                 >
@@ -370,28 +366,28 @@ export default function App() {
 
       {/* Social Icons Footer */}
       <footer className="relative z-10 flex justify-center gap-4 pb-12 pt-4">
-        <a 
-          href="https://instagram.com" 
-          target="_blank" 
-          rel="noopener noreferrer" 
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="Instagram"
           className="liquid-glass rounded-full p-4 text-white/80 hover:text-white hover:bg-white/5 transition-all"
         >
           <Instagram className="h-5 w-5" />
         </a>
-        <a 
-          href="https://twitter.com" 
-          target="_blank" 
-          rel="noopener noreferrer" 
+        <a
+          href="https://twitter.com"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="Twitter"
           className="liquid-glass rounded-full p-4 text-white/80 hover:text-white hover:bg-white/5 transition-all"
         >
           <Twitter className="h-5 w-5" />
         </a>
-        <a 
-          href="https://github.com" 
-          target="_blank" 
-          rel="noopener noreferrer" 
+        <a
+          href="https://github.com"
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label="Website"
           className="liquid-glass rounded-full p-4 text-white/80 hover:text-white hover:bg-white/5 transition-all"
         >
