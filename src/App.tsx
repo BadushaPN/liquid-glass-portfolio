@@ -120,7 +120,7 @@ export default function App() {
           onTimeUpdate={handleTimeUpdate}
           onEnded={handleEnded}
           onPlay={handlePlay}
-          className="absolute top-0 left-0 w-full h-full object-cover scale-[1.5]"
+          className="absolute top-0 left-0 w-full h-full object-cover"
           style={{ opacity: 0 }}
         />
       </div>
