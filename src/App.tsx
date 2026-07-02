@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Globe, ArrowRight, Instagram, Twitter } from 'lucide-react';
+import { Globe, ArrowRight, Instagram, Twitter, Linkedin } from 'lucide-react';
 
 export default function App() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -367,7 +367,7 @@ export default function App() {
       {/* Social Icons Footer */}
       <footer className="relative z-10 flex justify-center gap-4 pb-12 pt-4">
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/ibrahim._.badusha._.__?igsh=am82YzQ4bW93dzVh&utm_source=qr"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
@@ -376,22 +376,22 @@ export default function App() {
           <Instagram className="h-5 w-5" />
         </a>
         <a
-          href="https://twitter.com"
+          href="https://x.com/badushapn?s=11"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Twitter"
+          aria-label="X (Twitter)"
           className="liquid-glass rounded-full p-4 text-white/80 hover:text-white hover:bg-white/5 transition-all"
         >
           <Twitter className="h-5 w-5" />
         </a>
         <a
-          href="https://github.com"
+          href="https://www.linkedin.com/in/badusha-p-n-0a90a324b/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Website"
+          aria-label="LinkedIn"
           className="liquid-glass rounded-full p-4 text-white/80 hover:text-white hover:bg-white/5 transition-all"
         >
-          <Globe className="h-5 w-5" />
+          <Linkedin className="h-5 w-5" />
         </a>
       </footer>
     </div>
